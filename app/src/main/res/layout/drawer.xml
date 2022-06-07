@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="start"
+    android:layout_width="206dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_lighter"
+    android:fitsSystemWindows="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_darker"
+        android:padding="32dp">
+
+        <com.aelsi2.practice12.RoundedImageButton
+            android:id="@+id/roundedImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:src="@drawable/avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck"
+            android:contentDescription="@string/profile_picture"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/example_user_name"
+            style="@style/Theme.Practice12.Drawer.Text.Name"
+            app:layout_constraintStart_toEndOf="@+id/roundedImageButton"
+            app:layout_constraintTop_toTopOf="@+id/roundedImageButton"
+            app:layout_constraintBottom_toTopOf="@id/user_city"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/user_city"
+            style="@style/Theme.Practice12.Drawer.Text.City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_city"
+            app:layout_constraintBottom_toBottomOf="@+id/roundedImageButton"
+            app:layout_constraintStart_toStartOf="@+id/user_name"
+            app:layout_constraintTop_toBottomOf="@id/user_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/drawer_history_button"
+            app:drawableStartCompat="@drawable/tiles"
+            android:drawablePadding="25dp"
+            android:gravity="center_vertical"
+            style="@style/Theme.Practice12.Drawer.Item"
+            android:text="@string/history"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <TextView
+            android:id="@+id/drawer_settings_button"
+            style="@style/Theme.Practice12.Drawer.Item"
+            android:drawablePadding="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/settings"
+            app:drawableStartCompat="@drawable/gear"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+</LinearLayout>
