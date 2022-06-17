@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="36dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="16dp">
+    <LinearLayout
+        android:id="@+id/bp_but_1"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="19dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        style="@style/Theme.Practice12.Button.BottomSheet.Normal"
+        app:layout_constraintBottom_toTopOf="@+id/bp_price_header"
+        app:layout_constraintEnd_toStartOf="@+id/bp_but_2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            style="@style/Theme.Practice12.BottomSheet.PanelTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/caricon"
+            android:layout_marginBottom="5dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_car_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bp_but_2"
+        style="@style/Theme.Practice12.Button.BottomSheet.Normal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="19dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bp_price_header"
+        app:layout_constraintEnd_toStartOf="@+id/bp_but_3"
+        app:layout_constraintStart_toEndOf="@+id/bp_but_1"
+        app:layout_constraintTop_toTopOf="@+id/bp_but_1">
+
+        <ImageView
+            style="@style/Theme.Practice12.BottomSheet.PanelTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/rulericon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_1_5_kilometers" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bp_but_3"
+        style="@style/Theme.Practice12.Button.BottomSheet.Normal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="19dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bp_price_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bp_but_2"
+        app:layout_constraintTop_toTopOf="@+id/bp_but_1">
+
+        <ImageView
+            style="@style/Theme.Practice12.BottomSheet.PanelTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/walkicon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_5_min_free" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/bp_price_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        style="@style/Theme.Practice12.BottomSheet.HeaderText"
+        android:text="@string/price"
+        app:layout_constraintBottom_toTopOf="@id/bp_price_1"
+        app:layout_constraintStart_toStartOf="@+id/bp_price_1" />
+
+    <LinearLayout
+        android:id="@+id/bp_price_1"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        style="@style/Theme.Practice12.Button.BottomSheet.Yellow"
+        app:layout_constraintBottom_toTopOf="@+id/bp_book_button"
+        app:layout_constraintEnd_toStartOf="@+id/bp_price_2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minute" />
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_1_min_1dollar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bp_price_2"
+        style="@style/Theme.Practice12.Button.BottomSheet.Yellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bp_book_button"
+        app:layout_constraintEnd_toStartOf="@+id/bp_price_3"
+        app:layout_constraintStart_toEndOf="@+id/bp_price_1"
+        app:layout_constraintTop_toTopOf="@+id/bp_price_1">
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hour" />
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_60_min_50dollar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bp_price_3"
+        style="@style/Theme.Practice12.Button.BottomSheet.Yellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bp_book_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bp_price_2"
+        app:layout_constraintTop_toTopOf="@+id/bp_price_1">
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/day" />
+
+        <TextView
+            style="@style/Theme.Practice12.BottomSheet.PanelBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_1440_min_300dollar" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/bp_book_button"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        style="@style/Theme.Practice12.Button.Yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/book"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

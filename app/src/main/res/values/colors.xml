@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="bottom_sheet_panel_highlighted">#454F63</color>
+    <color name="bottom_sheet_panel">#353A50</color>
+    <color name="button_purple_dark">#8F2DA6</color>
+    <color name="button_yellow_dark">#977417</color>
+    <color name="button_purple">#C840E9</color>
+    <color name="button_yellow">#FFB900</color>
     <color name="history_divider">#F4F4F6</color>
     <color name="history_item">#454F63</color>
     <color name="settings_email_color">#78849E</color>

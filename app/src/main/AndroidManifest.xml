@@ -10,12 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practice12">
         <activity
+            android:name=".TimerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Practice12.Settings"/>
+        <activity
             android:name=".HistoryActivity"
             android:exported="false" />
         <activity
             android:name=".SettingsActivity"
             android:exported="false"
-            android:theme="@style/Theme.Practice12.Settings"/>
+            android:theme="@style/Theme.Practice12.Settings" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

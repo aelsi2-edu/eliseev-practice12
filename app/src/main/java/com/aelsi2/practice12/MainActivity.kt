@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var historyButton : View
     private lateinit var settingsButton : View
     private lateinit var menuButton : View
+    private lateinit var carButton : View
+    private lateinit var bottomSheet: CarBottomSheet
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,9 +27,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         historyButton = findViewById(R.id.drawer_history_button)
         settingsButton = findViewById(R.id.drawer_settings_button)
         menuButton = findViewById(R.id.menu_button)
+        carButton = findViewById(R.id.car_button)
         historyButton.setOnClickListener(onClickDebouncer)
         settingsButton.setOnClickListener(onClickDebouncer)
         menuButton.setOnClickListener(onClickDebouncer)
+        carButton.setOnClickListener(onClickDebouncer)
+        bottomSheet = CarBottomSheet()
     }
     private fun showDrawer() {
         drawerLayout.openDrawer(GravityCompat.START, true)
@@ -57,6 +62,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             menuButton -> {
                 showDrawer()
+            }
+            carButton -> {
+                bottomSheet.show(supportFragmentManager, CarBottomSheet.TAG)
             }
         }
     }
